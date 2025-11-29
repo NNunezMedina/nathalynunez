@@ -1,9 +1,8 @@
 .home-container {
   min-height: 70vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-end;
-  padding: 0 80px 0 120px;
   color: #111111;
   gap: 8rem;
 
@@ -11,14 +10,12 @@
   overflow: hidden;
 }
 
-
 /* Aseguramos que el contenido vaya por encima de las ondas */
 .home-left,
 .home-right {
   position: relative;
   z-index: 1;
 }
-
 
 /* IZQUIERDA: nombre y texto descriptivo */
 .home-left {

@@ -2,7 +2,7 @@ import "./Home.css";
 
 export default function Home() {
   return (
-    <section id="home" className="home-container">
+    <section id="home" className="home-container page-wrapper">
       <div className="home-left">
         <p className="home-name">NATHALY NÚÑEZ</p>
         <p className="home-role">
