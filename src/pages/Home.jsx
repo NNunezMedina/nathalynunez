@@ -3,16 +3,27 @@ import "./Home.css";
 export default function Home() {
   return (
     <section id="home" className="home-container">
-      <div className="text-content">
-        <h1>
-          Hola, yo soy <span>Nathaly Núñez</span> <br />
-          pero puedes llamarme <span>Nath</span>
-        </h1>
-        <p>
-          Arquitecta • Diseñadora Web • Desarrolladora Front-End
+
+      {/* Columna izquierda: tu nombre y descripción */}
+      <div className="home-left">
+        <p className="home-name">NATHALY NÚÑEZ</p>
+        <p className="home-role">
+          Shopify Developer | Front-End Web Developer
         </p>
-        <button className="main-btn">Ver mis proyectos</button>
+        <p className="home-description">
+          Shopify Front-End Developer specialized in Liquid, React, and Tailwind CSS. I build scalable, high-performance eCommerce experiences focused on clean architecture, accessibility, and modern SEO.
+        </p>
       </div>
+
+      {/* Columna derecha: textos grandes */}
+      <div className="home-right">
+        <nav className="home-menu">
+          <a href="#work">WORK</a>
+          <a href="#about">ABOUT</a>
+          <a href="#contact">CONTACT</a>
+        </nav>
+      </div>
+
     </section>
   );
 }
