@@ -1,13 +1,24 @@
 .home-container {
-  min-height: 80vh;
+  min-height: 70vh;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   padding: 0 80px 0 120px;
-  background-color: #ece7e1; 
   color: #111111;
   gap: 8rem;
+
+  position: relative;
+  overflow: hidden;
 }
+
+
+/* Aseguramos que el contenido vaya por encima de las ondas */
+.home-left,
+.home-right {
+  position: relative;
+  z-index: 1;
+}
+
 
 /* IZQUIERDA: nombre y texto descriptivo */
 .home-left {
@@ -16,7 +27,7 @@
 }
 
 .home-name {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-weight: 600;
@@ -24,13 +35,13 @@
 }
 
 .home-role {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 500;
   margin-bottom: 1.2rem;
 }
 
 .home-description {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.4;
   color: #444444;
 }

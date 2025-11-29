@@ -22,13 +22,54 @@ a:hover {
   color: #535bf2;
 }
 
-/* body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-} */
+
+
+body::before {
+  content: "";
+  position: fixed;      /* cubre toda la página, no se mueve con el scroll */
+  inset: -25%;
+  background: linear-gradient(
+    135deg,
+    rgba(217, 176, 215, 0.55),
+    rgba(236, 231, 225, 0.7),
+    rgba(217, 176, 215, 0.55)
+  );
+  background-size: 200% 200%;
+  animation: waveFlow 18s ease-in-out infinite;
+
+  filter: blur(70px);
+  pointer-events: none;
+  z-index: -1;         /* detrás de todo, incluido navbar y secciones */
+  mix-blend-mode: multiply;
+}
+
+/* ANIMACIÓN DE LAS ONDAS */
+@keyframes waveFlow {
+  0% {
+    background-position: 0% 0%;
+    opacity: 0.75;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  45% {
+    opacity: 0.18;
+  }
+  50% {
+    opacity: 0.05; /* aquí casi ves #ece7e1 puro */
+  }
+  55% {
+    opacity: 0.18;
+  }
+  75% {
+    background-position: 100% 100%;
+    opacity: 0.55;
+  }
+  100% {
+    background-position: 0% 0%;
+    opacity: 0.75;
+  }
+}
 
 h1 {
   font-size: 3.2em;
