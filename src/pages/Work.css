@@ -1,0 +1,67 @@
+.work-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 5rem 8rem;
+  min-height: 100vh;
+  background-color: #0a0a0a; /* negro elegante */
+  color: #e8e8e8;
+  gap: 4rem;
+}
+
+/* Left text */
+.work-left {
+  flex: 1;
+  max-width: 40%;
+}
+
+.work-left h2 {
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.work-left p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+/* Right project links */
+.work-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.work-item {
+  text-decoration: none;
+  font-size: 3rem;
+  font-family: "Cinzel", serif; /* o la fuente elegante que estás usando */
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transition: opacity 0.3s ease;
+  color: #f4f4f4;
+}
+
+.work-item:hover {
+  opacity: 0.6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .work-container {
+    flex-direction: column;
+    padding: 3rem 2rem;
+  }
+
+  .work-left {
+    max-width: 100%;
+  }
+
+  .work-item {
+    font-size: 2rem;
+  }
+}

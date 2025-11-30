@@ -1,4 +1,5 @@
 import "./Home.css";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -18,9 +19,9 @@ export default function Home() {
 
       <div className="home-right">
         <nav className="home-menu">
-          <a href="#work">WORK</a>
-          <a href="#about">ABOUT</a>
-          <a href="#contact">CONTACT</a>
+          <Link to="/work">WORK</Link>
+          <Link to="/about">ABOUT</Link>
+          <Link to="/contact">CONTACT</Link>
         </nav>
       </div>
     </section>

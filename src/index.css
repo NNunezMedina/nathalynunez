@@ -26,18 +26,17 @@ body {
   margin:0 !important;
 }
 
-
-
 body::before {
   content: "";
   position: fixed;      /* cubre toda la página, no se mueve con el scroll */
   inset: -25%;
   background: linear-gradient(
-    135deg,
-    rgba(217, 176, 215, 0.55),
-    rgba(236, 231, 225, 0.7),
-    rgba(217, 176, 215, 0.55)
-  );
+  135deg,
+  rgba(235, 89, 156, 0.85),   /* rosa protagonista */
+  rgba(236, 231, 225, 0.85),  /* beige elegante */
+  rgba(247, 133, 181, 0.9)    /* rosa pastel suave */
+);
+filter: blur(45px);
   background-size: 200% 200%;
   animation: waveFlow 18s ease-in-out infinite;
 
@@ -105,4 +104,16 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+@media (max-width: 900px) {
+  .page-wrapper {
+  padding: 0 48px !important; 
+}
+}
+
+@media (max-width: 360px) {
+  .page-wrapper {
+  padding: 0 28px !important; 
+}
 }
