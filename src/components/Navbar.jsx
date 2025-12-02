@@ -1,9 +1,15 @@
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 export default function Navbar() {
+  const location = useLocation();
+
+  // Detecta si estás en /work
+  const isWorkPage = location.pathname === "/work";
   return (
-    <nav className="navbar page-wrapper">
+    
+    <nav className={`navbar page-wrapper ${isWorkPage ? "navbar-work" : ""}`}>
       <Link to="/" className="logo">Home</Link>
 
       <div className="nav-icons">

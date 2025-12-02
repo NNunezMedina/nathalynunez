@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Work from "./pages/Work";
 
 import SmartCoopFarm from "./pages/projects/SmartCoopFarm";
+import DinoBars from "./pages/projects/DinoBars";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="/work" element={<Work />} />
 
         <Route path="/smart-coop-farm" element={<SmartCoopFarm />} />
+        <Route path="/dino-bars" element={<DinoBars />} />
       </Routes>
     </>
   );

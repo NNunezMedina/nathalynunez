@@ -3,10 +3,34 @@
   justify-content: space-between;
   align-items: flex-start;
   padding: 5rem 8rem;
-  min-height: 100vh;
-  background-color: #0a0a0a; /* negro elegante */
+  min-height: 80vh;
   color: #e8e8e8;
   gap: 4rem;
+  margin: 0 3rem;
+  animation: slideUp 0.8s ease-out forwards;
+  position: relative;
+  z-index: 1;
+}
+
+.work-overlay {
+  position: fixed;
+  inset: 0 3rem 0 3rem; /* top right bottom left */
+  background: #000;
+  z-index: 0; /* por encima del body::before (-1) y por debajo del navbar (10) */
+  animation: workBgUp 0.8s ease-out forwards;
+  pointer-events: none; /* para no bloquear clics */
+}
+
+/* Animación: sube desde abajo */
+@keyframes workBgUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* Left text */
@@ -39,7 +63,7 @@
 .work-item {
   text-decoration: none;
   font-size: 3rem;
-  font-family: "Cinzel", serif; /* o la fuente elegante que estás usando */
+  font-family: "Cinzel", serif; 
   text-transform: uppercase;
   letter-spacing: 3px;
   transition: opacity 0.3s ease;

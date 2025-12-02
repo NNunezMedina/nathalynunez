@@ -9,6 +9,13 @@
   margin:2rem 0;
 }
 
+.navbar-work .logo,
+.navbar-work a,
+.navbar-work svg {
+  color: white !important;
+  fill: white !important;
+}
+
 .logo {
   color: #111111;
   text-decoration: none;
