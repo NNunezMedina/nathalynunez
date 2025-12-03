@@ -25,13 +25,20 @@ export default function Work() {
 
         {/* Right Side - Project Links */}
         <div className="work-right">
+        <div className="work-project">
           <Link to="/smart-coop-farm" className="work-item">
             SMART COOP FARM
           </Link>
+          <p className="work-desc">— Shopify custom theme development</p>
+        </div>
+
+        <div className="work-project">
           <Link to="/dino-bars" className="work-item">
             DINO BARS
           </Link>
+          <p className="work-desc">— Custom bundle builder & UI adjustments</p>
         </div>
+      </div>
       </section>
     </>
   );

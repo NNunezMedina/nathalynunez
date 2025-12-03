@@ -19,9 +19,9 @@ export default function Home() {
 
       <div className="home-right">
         <nav className="home-menu">
-          <Link to="/work">WORK</Link>
-          <Link to="/about">ABOUT</Link>
-          <Link to="/contact">CONTACT</Link>
+          <Link to="/work"><span>WORK</span></Link>
+          <Link to="/about"><span>ABOUT</span></Link>
+          <Link to="/contact"><span>CONTACT</span></Link>
         </nav>
       </div>
     </section>
