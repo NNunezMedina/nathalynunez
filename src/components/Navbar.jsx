@@ -7,10 +7,18 @@ export default function Navbar() {
 
   // Detecta si estás en /work
   const isWorkPage = location.pathname === "/work";
+  const isSmartPage = location.pathname === "/smart-coop-farm";
   return (
     
     <nav className={`navbar page-wrapper ${isWorkPage ? "navbar-work" : ""}`}>
-      <Link to="/" className="logo">Home</Link>
+      <div className="nav-links">
+        <Link to="/" className="logo">Home</Link>
+
+        {isSmartPage && (
+          <Link to="/work" className="work-link">Work</Link>
+        )}
+      </div>
+
 
       <div className="nav-icons">
         <a

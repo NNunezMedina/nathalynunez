@@ -9,6 +9,11 @@
   margin:2rem 0;
 }
 
+.nav-links {
+  display:flex;
+  gap:20px;
+}
+
 .navbar-work .logo,
 .navbar-work a,
 .navbar-work svg {
@@ -16,16 +21,19 @@
   fill: white !important;
 }
 
-.logo {
+.logo,
+.work-link {
   color: #111111;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: 1px;
   cursor: pointer;
+  
 }
 
-.logo:hover {
+.logo:hover,
+.work-link:hover {
   font-weight: 700;
 }
 

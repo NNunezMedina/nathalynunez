@@ -14,14 +14,13 @@
 
 .work-overlay {
   position: fixed;
-  inset: 0 3rem 0 3rem; /* top right bottom left */
+  inset: 0 3rem 0 3rem; 
   background: #000;
-  z-index: 0; /* por encima del body::before (-1) y por debajo del navbar (10) */
+  z-index: 0; 
   animation: workBgUp 0.8s ease-out forwards;
-  pointer-events: none; /* para no bloquear clics */
+  pointer-events: none; 
 }
 
-/* Animación: sube desde abajo */
 @keyframes workBgUp {
   from {
     transform: translateY(100%);
@@ -62,10 +61,10 @@
 
 .work-item {
   text-decoration: none;
-  font-size: 3rem;
+  font-size: clamp(3rem, 10vw, 5.2rem);
   font-family: "Cinzel", serif; 
   text-transform: uppercase;
-  letter-spacing: 3px;
+  /* letter-spacing: 3px; */
   transition: opacity 0.3s ease;
   color: #f4f4f4;
 }
