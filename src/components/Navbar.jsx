@@ -5,12 +5,15 @@ import { useLocation } from "react-router-dom";
 export default function Navbar() {
   const location = useLocation();
 
-  // Detecta si estás en /work
   const isWorkPage = location.pathname === "/work";
   const isSmartPage = location.pathname === "/smart-coop-farm";
+
   return (
-    
-    <nav className={`navbar page-wrapper ${isWorkPage ? "navbar-work" : ""}`}>
+    <nav
+      className={`navbar page-wrapper ${
+        isWorkPage || isSmartPage ? "navbar-work" : ""
+      }`}
+    >
       <div className="nav-links">
         <Link to="/" className="logo">Home</Link>
 

@@ -1,0 +1,117 @@
+.project-hero {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-top: -100px;   /* aprox altura navbar */
+  padding-top: 80px;
+}
+
+/* Rectángulo negro que cae desde arriba */
+.black-drop {
+  position: absolute;           /* ahora vive dentro del hero */
+  top: 0;
+  left: 3rem;
+  right: 3rem;
+  height: 90vh;
+  background: #1a1818;
+  z-index: 0;
+  transform: translateY(-100%);
+  animation: dropDown 1s ease-out forwards;
+  border-radius: 0 0 30px 30px;
+}
+
+/* Animación del rectángulo cayendo */
+@keyframes dropDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Título animado desde abajo del rectángulo */
+.hero-title {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(3rem, 8vw, 8rem);
+  color: white;
+  opacity: 0;
+  transform: translateY(60px);
+  animation: titleRise 1s ease-out forwards;
+  animation-delay: 0.9s;
+  font-family: "Playfair Display", serif;
+}
+
+@keyframes titleRise {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ------------------------------------------ */
+/* SECCIÓN DESCRIPTIVA */
+/* ------------------------------------------ */
+
+.project-description {
+  padding: 5rem 120px 6rem 120px !important;
+  color: #111111;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Texto grande centrado */
+.project-intro {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.6rem, 3vw, 2.8rem);
+  line-height: 1.3;
+  text-align: center;
+  margin-bottom: 5rem;
+  color: #111111;
+}
+
+/* Grid: Role / Responsibilities / URL */
+.project-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+
+.project-info-grid h4 {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  color: #111111;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.project-info-grid p,
+.project-info-grid a {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #1a1818;
+  text-decoration: none;
+}
+
+.project-info-grid a:hover {
+  text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .project-info-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
