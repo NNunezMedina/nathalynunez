@@ -2,11 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 5rem 8rem;
   min-height: 80vh;
   color: #e8e8e8;
   gap: 4rem;
-  margin: 0 3rem;
   animation: slideUp 0.8s ease-out forwards;
   position: relative;
   z-index: 1;
@@ -35,20 +33,23 @@
 
 /* Left text */
 .work-left {
-  flex: 1;
-  max-width: 40%;
+  max-width: 420px;
 }
 
 .work-left h2 {
-  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
   letter-spacing: 3px;
-  margin-bottom: 1.5rem;
-  font-weight: 600;
+  margin-bottom: 1rem;
+  margin-top:0;
+  font-weight: 500;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
 .work-left p {
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.4;
   margin-bottom: 1.2rem;
 }
 
@@ -62,7 +63,7 @@
 
 .work-item {
   text-decoration: none;
-  font-size: clamp(3rem, 10vw, 3.3rem);
+  font-size: clamp(3rem, 10vw, 4.6rem);
   font-family: "Playfair Display", serif;
   text-transform: uppercase;
   /* letter-spacing: 3px; */
@@ -88,11 +89,12 @@
 
 .work-desc {
   font-size: 0.9rem;
-  color: #555;
+  color: #F4F4F4;
   letter-spacing: 0.03em;
   margin-left: 0.2rem;
   margin-top:0;
   margin-bottom:0;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .work-left,
@@ -118,10 +120,33 @@
 }
 
 /* Responsive */
+
+@media (max-width: 1400px) { 
+.work-item {
+    font-size: clamp(3rem, 10vw, 4.2rem);
+  }
+}
+
+@media (max-width: 1200px) { 
+.work-left {
+    max-width: 330px;
+  }
+
+  .work-item {
+    font-size: clamp(3rem, 10vw, 4rem);
+  }
+}
+@media (max-width: 1100px) { 
+  .work-item {
+    font-size: clamp(3rem, 10vw, 3rem);
+  }
+}
+
 @media (max-width: 900px) {
   .work-container {
     flex-direction: column;
     padding: 3rem 2rem;
+    gap:2rem;
   }
 
   .work-left {
@@ -131,4 +156,28 @@
   .work-item {
     font-size: 2rem;
   }
+
+   .work-overlay {
+  inset: 0 2rem 0 2rem; 
+}
+
+.work-desc {
+  font-size: 0.7rem;
+}
+}
+
+@media (max-width: 600px) {
+  .work-overlay {
+  inset: 0 1rem 0 1rem; 
+}
+
+.work-container {
+    flex-direction: column;
+    margin:0;
+  }
+
+  .work-left p {
+    font-size:0.8rem;
+  }
+
 }
