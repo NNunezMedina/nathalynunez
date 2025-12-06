@@ -1,27 +1,32 @@
 import "./Navbar.css";
-import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Navbar() {
   const location = useLocation();
 
   const isWorkPage = location.pathname === "/work";
   const isSmartPage = location.pathname === "/smart-coop-farm";
+  const isDinoPage = location.pathname === "/dino-bars";
+
+  const isProjectPage = isSmartPage || isDinoPage;
 
   return (
     <nav
       className={`navbar page-wrapper ${
-        isWorkPage || isSmartPage ? "navbar-work" : ""
+        isWorkPage || isProjectPage ? "navbar-work" : ""
       }`}
     >
       <div className="nav-links">
-        <Link to="/" className="logo">Home</Link>
+        <Link to="/" className="logo">
+          Home
+        </Link>
 
-        {isSmartPage && (
-          <Link to="/work" className="work-link">Work</Link>
+        {isProjectPage && (
+          <Link to="/work" className="work-link">
+            Work
+          </Link>
         )}
       </div>
-
 
       <div className="nav-icons">
         <a
@@ -35,7 +40,7 @@ export default function Navbar() {
             viewBox="0 0 256 256"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path d="M96,80a8,8,0,1,1-8-8A7.99993,7.99993,0,0,1,96,80Zm-8,28.001a4,4,0,0,0-4,4v64a4,4,0,1,0,8,0v-64A4,4,0,0,0,88,108.001Zm60,0a31.92463,31.92463,0,0,0-24,10.86767V112.001a4,4,0,0,0-8,0v64a4,4,0,1,0,8,0v-36a24,24,0,0,1,48,0v36a4,4,0,1,0,8,0v-36A32.03619,32.03619,0,0,0,148,108.001ZM224,44V212a12.01375,12.01375,0,0,1-12,12H44a12.01375,12.01375,0,0,1-12-12V44A12.01359,12.01359,0,0,1,44,32H212A12.01359,12.01359,0,0,1,224,44Zm-8,0a4.00458,4.00458,0,0,0-4-4H44a4.00458,4.00458,0,0,0-4,4V212a4.00458,4.00458,0,0,0,4,4H212a4.00458,4.00458,0,0,0,4-4Z"/>
+            <path d="M96,80a8,8,0,1,1-8-8A7.99993,7.99993,0,0,1,96,80Zm-8,28.001a4,4,0,0,0-4,4v64a4,4,0,1,0,8,0v-64A4,4,0,0,0,88,108.001Zm60,0a31.92463,31.92463,0,0,0-24,10.86767V112.001a4,4,0,0,0-8,0v64a4,4,0,1,0,8,0v-36a24,24,0,0,1,48,0v36a4,4,0,1,0,8,0v-36A32.03619,32.03619,0,0,0,148,108.001ZM224,44V212a12.01375,12.01375,0,0,1-12,12H44a12.01375,12.01375,0,0,1-12-12V44A12.01359,12.01359,0,0,1,44,32H212A12.01359,12.01359,0,0,1,224,44Zm-8,0a4.00458,4.00458,0,0,0-4-4H44a4.00458,4.00458,0,0,0-4,4V212a4.00458,4.00458,0,0,0,4,4H212a4.00458,4.00458,0,0,0,4-4Z" />
           </svg>
         </a>
       </div>

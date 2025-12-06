@@ -1,0 +1,70 @@
+.project-hero {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-top: -100px;
+  padding-top: 80px;
+}
+
+/* Rectángulo negro que cae desde arriba */
+.black-drop {
+  position: absolute;
+  top: 0;
+  left: 3rem;
+  right: 3rem;
+  height: 90vh;
+  background: #1a1818;
+  z-index: 0;
+  transform: translateY(-100%);
+  animation: dropDown 1s ease-out forwards;
+  border-radius: 0 0 30px 30px;
+}
+
+/* Animación del rectángulo cayendo */
+@keyframes dropDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Título animado desde abajo del rectángulo */
+.hero-title {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(3rem, 8vw, 8rem);
+  color: white;
+  opacity: 0;
+  transform: translateY(60px);
+  animation: titleRise 1s ease-out forwards;
+  animation-delay: 0.9s;
+  font-family: "Playfair Display", serif;
+}
+
+@keyframes titleRise {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .project-hero {
+    height: 60vh;
+  }
+
+  .black-drop {
+    left: 1.4rem;
+    right: 1.4rem;
+    height: 60vh;
+  }
+}

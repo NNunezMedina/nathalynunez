@@ -13,7 +13,7 @@ export default function SmartCoopFarm() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target); // solo anima una vez
+            observer.unobserve(entry.target); 
           }
         });
       },
