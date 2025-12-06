@@ -100,7 +100,7 @@
 .project-info-grid a {
   font-size: 1rem;
   line-height: 1.5;
-  color: #1a1818;
+  color: #111111;
   text-decoration: none;
 }
 
@@ -120,8 +120,9 @@
   width: 110%;
   max-width: 1600px; 
   border-radius: 12px;
-  height: 658px;
+  height: auto;
   object-fit: cover;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
 }
 
 .project-text-block {
@@ -129,7 +130,7 @@
   margin: 6rem auto;
   padding: 0 120px;
    font-family: 'Montserrat', sans-serif;
-  color: #1a1818;
+  color: #111111;
   line-height: 1.5;
   font-size: clamp(0.9rem, 1.6vw, 1rem);
 }
@@ -160,6 +161,77 @@
   transition-delay: 0.25s;
 }
 
+.project-big-text {
+  max-width: 1000px;
+  margin: 8rem auto;
+  text-align: left;
+}
+
+.big-quote {
+  font-size: clamp(1.6rem, 3vw, 2.8rem);
+  line-height: 1.3;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  color: #111111; /* ajusta si deseas */
+  font-family: "Playfair Display", serif; /* o tu font */
+}
+
+/* Párrafo pequeño */
+.small-description {
+  font-size: clamp(1rem, 2vw, 1rem);
+  line-height: 1.7;
+  color: #111111;
+  max-width: 850px;
+}
+
+/* Contenedor del video */
+.project-video-full {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 6rem 0;
+}
+
+/* Estilo del video */
+.project-video-full video {
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 16px;
+  display: block;
+  object-fit: cover;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* Sección del botón centrado */
+.project-button-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 6rem 0 3rem;
+}
+
+/* Estilo del botón */
+.project-button {
+  background: #111; /* negro suave */
+  color: #ece7e2;   /* beige del portafolio */
+  padding: 1rem 2.4rem;
+  border-radius: 50px;
+  font-family: "Playfair Display", serif; /* ajusta según tu tipografía */
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover */
+.project-button:hover {
+  background: #000; /* más oscuro */
+  transform: translateY(-2px);
+}
+
+
 /* Responsivo */
 @media (max-width: 900px) {
   .project-intro {
@@ -188,5 +260,9 @@
 
   .project-text-block {
   padding: 0;
+}
+
+.project-big-text {
+  margin: 0;
 }
 }
