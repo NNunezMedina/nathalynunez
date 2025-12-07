@@ -1,5 +1,6 @@
 import "./DinoBars.css";
 import { useEffect } from "react";
+import celular4 from "../../assets/celular4.png"; 
 
 export default function DinoBars() {
   useEffect(() => {
@@ -56,7 +57,7 @@ export default function DinoBars() {
           <div className="reveal-on-scroll">
             <h4>URL</h4>
             <a href="https://dinobars.com/pages/bundle-builder" target="_blank">
-              dino.bars
+              dino.bars.bundle.builder
             </a>
           </div>
         </div>
@@ -71,6 +72,37 @@ export default function DinoBars() {
           playsInline
           controls
         />
+      </section>
+       <section className="project-phone-section page-wrapper">
+        <div className="phone-text reveal-on-scroll">
+          <h2>Mobile bundle experience</h2>
+          <p>
+            The bundle builder was designed with a dedicated mobile layout, making it easy
+            to browse flavors, adjust quantities, and see discounts update in real time.
+            This video shows the fully functional flow inside the Shopify theme.
+          </p>
+        </div>
+
+        <div className="phone-frame">
+        <img src={celular4} alt="Dino Bars mobile bundle builder" />
+
+        <iframe
+          className="phone-video"
+          src="https://player.cloudinary.com/embed/?cloud_name=dzlel4ncg&public_id=dinobarscell_mfwt1c&profile=cld-looping"
+          width="640"
+          height="360"
+          style={{ height: "93%", width: "82%" }}
+          allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+          allowFullScreen
+          frameBorder="0"
+        />
+      </div>
+      </section>
+
+      <section className="project-button-section reveal-on-scroll">
+        <a href="https://dinobars.com/?srsltid=AfmBOoos80NFCHlTRHjT2yZYmqWP9FI7PxgWjsrIUfkJF-3pssosP0il" target="_blank" className="project-button">
+          Check it out →
+        </a>
       </section>
     </>
   );

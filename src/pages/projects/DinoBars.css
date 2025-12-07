@@ -121,6 +121,95 @@
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
 }
 
+.project-phone-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  max-width: 1100px;
+  margin: 0 auto 6rem;
+}
+
+.phone-text {
+  flex: 1;
+  font-family: 'Montserrat', sans-serif;
+  color: #111111;
+}
+
+.phone-text h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.6rem, 3vw, 2.8rem);
+  margin-bottom: 1.6rem;
+  line-height: 1.3;
+}
+
+.phone-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.phone-mockup {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.phone-frame {
+  position: relative;
+  width: 320px;
+  max-width: 100%;
+}
+
+/* Imagen del celular arriba */
+.phone-frame img {
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+/* Iframe del video debajo */
+.phone-frame .phone-video {
+  position: absolute;
+  top: 3%;      /* ajusta estos 4 valores */
+  left: 9%;
+  width: 74%;
+  height: 82%;
+  border-radius: 20px;
+  z-index: 1;   /* debajo de la imagen */
+  border: 0;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.25);
+}
+
+/* Sección del botón centrado */
+.project-button-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 6rem 0 6rem;
+}
+
+/* Estilo del botón */
+.project-button {
+  background: #111; 
+  color: #ece7e2;  
+  padding: 1rem 2.4rem;
+  border-radius: 50px;
+  font-family: "Playfair Display", serif; 
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover */
+.project-button:hover {
+  background: #000; 
+  transform: translateY(-2px);
+}
+
 @media (max-width: 900px) {
   .project-hero {
     height: 60vh;
@@ -147,5 +236,26 @@
   width: 86%;
 }
 
-  
+.project-phone-section {
+    flex-direction: column;
+    gap: 2.5rem;
+    margin: 3rem auto 4rem;
+  }
+
+  .phone-text {
+    width: 100%;
+  }
+
+  .phone-mockup {
+    width: 100%;
+  }
+
+  .phone-frame {
+    width: 260px;
+    margin: 0 auto;
+  }
+
+  .project-button-section {
+  margin: 4rem 0 3rem;
+}
 }
