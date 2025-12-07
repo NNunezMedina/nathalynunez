@@ -30,7 +30,7 @@ export default function Navbar() {
 
       <div className="nav-icons">
         <a
-          href="https://www.linkedin.com/in/tu-perfil"
+          href="https://www.linkedin.com/in/nathalynunezmedina/"
           target="_blank"
           rel="noopener noreferrer"
           className="icon-link"

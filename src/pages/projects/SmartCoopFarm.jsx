@@ -36,21 +36,23 @@ export default function SmartCoopFarm() {
       {/* SECCIÓN DESCRIPTIVA */}
       <section className="project-description page-wrapper ">
         <p className="project-intro">
-          A Shopify e-commerce built for Smart Coop Farm, focused on 
-          clean architecture, custom theme development and scalable performance.
+          A custom Shopify theme built from Dawn, developed with pixel-perfect Figma execution, dynamic metafields, and a clean, scalable architecture across 15+ pages.
         </p>
 
         <div className="project-info-grid">
           <div className="reveal-on-scroll">
             <h4>ROLE</h4>
-            <p>Frontend Development</p>
+            <p>Frontend Developer<br></br>Shopify Theme Development</p>
           </div>
 
           <div className="reveal-on-scroll">
             <h4>RESPONSIBILITIES</h4>
             <p>
-              Theme Development, Shopify Setup, Performance Improvements,
-              Custom Sections, UX Enhancements, Launch.
+              Custom theme development,
+              Pixel-perfect implementation,
+              Metafield-based logic,
+              Reusable CMS sections,
+              UX & performance.
             </p>
           </div>
 
@@ -70,17 +72,11 @@ export default function SmartCoopFarm() {
         {/* TEXTO LARGO */}
         <section className="project-text-block reveal-on-scroll">
           <p>
-            This was a really fun, collaborative project between myself and the Smart 
-            Coop Farm team. They were looking for someone to help create a custom 
-            Shopify theme that had more personality and flexibility than the usual 
-            templates you see out there.
+            This project involved developing a fully custom Shopify theme that translated a detailed Figma design into a flexible, scalable storefront. I structured the theme architecture, built over a dozen unique pages, and created reusable sections that supported a clean CMS workflow. 
           </p>
 
           <p>
-            After reviewing their ideas and brand direction, I started building the 
-            theme architecture first. The intention was to keep the CMS easy to manage, 
-            allowing their team to edit and update the website without relying on heavy 
-            apps or complicated configurations.
+            Throughout the build, I implemented metafield-driven logic for product-specific UI elements, customized templates for different content needs, and optimized front-end performance to keep the experience fast and lightweight. It was a large, detail-oriented project that required precision, consistency, and a strong understanding of Shopify’s theme system.
           </p>
         </section>
         <section className="project-image-full reveal-on-scroll">
@@ -92,16 +88,11 @@ export default function SmartCoopFarm() {
 
         <section className="project-big-text reveal-on-scroll">
         <h2 className="big-quote">
-          I really enjoy being able to define the content management system
-          structure of a website, systems are just my thing.
+          I really enjoy watching designs come to life — turning static layouts into fully functional, interactive pages is the part of development that inspires me most.
         </h2>
 
         <p className="small-description">
-          Paul was also so willing to do what was needed for the content, which was
-          a dream to work with. He created 10-second clips of his best videos in no
-          time and uploaded them to Vimeo for the home page carousel with
-          auto-playing video backgrounds. His amazing content really made this
-          website what it is.
+          The team also provided excellent support throughout the build. They shared all the images and assets we needed, and anytime we requested a higher-quality version or an additional visual, they delivered it quickly. Having consistent, well-prepared content made the development process much smoother and helped the final website feel cohesive and polished.
         </p>
       </section>
       <section className="project-video-full reveal-on-scroll">

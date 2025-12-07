@@ -36,7 +36,7 @@ export default function Work() {
           <Link to="/dino-bars" className="work-item">
             DINO BARS
           </Link>
-          <p className="work-desc">— Custom bundle builder & UI adjustments</p>
+          <p className="work-desc">— Shopify custom bundle builder & UI adjustments</p>
         </div>
       </div>
       </section>

@@ -57,6 +57,70 @@
   }
 }
 
+.project-video-full {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0 0 6rem;
+}
+
+.project-description {
+  padding: 5rem 120px 6rem 120px !important;
+  color: #111111;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Texto grande centrado */
+.project-intro {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.6rem, 3vw, 2.8rem);
+  line-height: 1.3;
+  text-align: center;
+  margin-bottom: 5rem;
+  color: #111111;
+}
+
+/* Grid: Role / Responsibilities / URL */
+.project-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+
+.project-info-grid h4 {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  color: #111111;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.project-info-grid p,
+.project-info-grid a {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #111111;
+  text-decoration: none;
+}
+
+.project-info-grid a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo del video */
+.project-video-full video {
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 16px;
+  display: block;
+  object-fit: cover;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
 @media (max-width: 900px) {
   .project-hero {
     height: 60vh;
@@ -67,4 +131,21 @@
     right: 1.4rem;
     height: 60vh;
   }
+
+   .project-info-grid {
+    grid-template-columns: 1fr;
+    text-align: left;
+    gap:0;
+    margin-top:1rem;
+  }
+
+  .project-video-full {
+  margin: 3rem 0;
+}
+
+.project-video-full video {
+  width: 86%;
+}
+
+  
 }
