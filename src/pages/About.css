@@ -1,0 +1,139 @@
+
+.about-page {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.about-reveal {
+  position: fixed;
+  inset: 0;
+  background: #111;
+  z-index: 999;
+  transform-origin: center;
+  animation: aboutRevealClose 1.1s ease-out forwards;
+  pointer-events: none;
+}
+
+/* Animación del overlay */
+@keyframes aboutRevealClose {
+  0% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
+
+/* Contenido: aparece de abajo hacia arriba con fade */
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+  padding: 6rem 0;
+
+  opacity: 0;
+  transform: translateY(40px);
+  animation: aboutContentUp 0.9s ease-out forwards;
+  animation-delay: 0.5s;
+  justify-items: self-end;
+}
+
+@keyframes aboutContentUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+  padding: 6rem 0;
+}
+
+.about-title {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-family: "Playfair Display", serif;
+  margin-bottom: 2rem;
+  color: #111;
+}
+
+.about-subtitle {
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+  color: #111;
+}
+
+.about-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 550px;
+  margin-bottom: 2.8rem;
+  color: #111;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Botón CV */
+.about-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 1.6rem;
+  background: #111;
+  color: #fff;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  transition: 0.3s ease;
+}
+
+.about-button:hover {
+  background: #000;
+  transform: translateY(-2px);
+}
+
+.arrow {
+  font-size: 1.4rem;
+  line-height: 0;
+}
+
+/* Imagen */
+.about-right img {
+  width: 100%;        /* antes 100% */
+  max-width: 380px;  /* controla tamaño máximo */
+  border-radius: 12px;
+  object-fit: cover;
+  max-height: 500px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    text-align: left;
+    justify-items: left;
+    gap:0;
+    margin-bottom:60px;
+  }
+
+  .about-right {
+    order: -1; /* foto arriba */
+  }
+
+  .about-right img {
+    width: 70%;
+    margin-bottom: 0;
+  }
+}
