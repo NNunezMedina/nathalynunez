@@ -23,11 +23,12 @@ export default function About() {
 
           <a
             href="/Nathaly-Nunez-CV.pdf"
-            download
+            target="_blank"
+            rel="noopener noreferrer"
             className="about-button"
-          >
+            >
             <span className="arrow">↓</span> Curriculum Vitae
-          </a>
+            </a>
         </div>
 
         <div className="about-right">
